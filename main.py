@@ -10,17 +10,10 @@ def print_hi(name):
 
 
 def convert_text(input_text):
-    binary_converted = ' '.join(format(c, 'b') for c in bytearray(input_text, "utf-8"))
+    binary_converted = ' '.join(format(c, 'x') for c in bytearray(input_text, "utf-8"))
     print(binary_converted)
 
 
-def convert_text2(input_text):
-    binary_converted = ' '.join(map(hex, bytearray(input_text, "utf-8")))
-    print(binary_converted)
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    convert_text('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    print('Please enter sentence you want to conver into hex code')
+    convert_text(input())
